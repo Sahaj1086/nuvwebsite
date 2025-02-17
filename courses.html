@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses - Navrachana University</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Courses We Offer</h1>
+    </header>
+    <nav>
+        <a href="home.html">Home</a>
+        <a href="index.html">about</a>
+        <a href="courses.html">Courses We Offer</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="admission.html">Contact Us</a>
+    </nav>
+    <div id="courses" class="section">
+        <ul>
+            <li><strong>Bachelor of Technology (B.Tech)</strong>
+                <ul>
+                    <li>Computer Science</li>
+                    <li>Civil Engineering</li>
+                    <li>Mechanical Engineering</li>
+                </ul>
+            </li>
+            <li><strong>Bachelor of Business Administration (BBA)</strong></li>
+        </ul>
+        <a href="contact.html" class="button">Contact Us for Admission</a>
+    </div>
+
+    <section id="timetable-section">
+        <h2>Spring Semester Timetable</h2>
+        <button onclick="toggleTimetable()">Show Timetable</button>
+        <section id="timetable" class="hidden">
+            <table>
+                <tr>
+                    <th>Time</th>
+                    <th>Monday</th>
+                    <th>Tuesday</th>
+                    <th>Wednesday</th>
+                    <th>Thursday</th>
+                    <th>Friday</th>
+                    <th>Saturday</th>
+                </tr>
+                <tr>
+                    <td>10:00AM - 12:00PM</td>
+                    <td>Web Technology Lab</td>
+                    <td>Digital Logic Design Lab</td>
+                    <td>Holiday</td>
+                    <td>Problem Solving with Python</td>
+                    <td>Engineering Mathematics II</td>
+                    <td>Holiday</td>
+                </tr>
+                <tr>
+                    <td>2:00PM - 3:00PM</td>
+                    <td>Digital Logic Design</td>
+                    <td>Web Technology</td>
+                    <td>Holiday</td>
+                    <td>Problem Solving with Python</td>
+                    <td>Engineering Graphics Lab</td>
+                    <td>Holiday</td>
+                </tr>
+                <tr>
+                    <td>3:00PM - 4:00PM</td>
+                    <td>Problem Solving with Python Lab</td>
+                    <td>Digital Logic Design Lab</td>
+                    <td>Holiday</td>
+                    <td>Engineering Mathematics II</td>
+                    <td>Web Technology</td>
+                    <td>Holiday</td>
+                </tr>
+                <tr>
+                    <td>4:00PM - 5:00PM</td>
+                    <td>Engineering Graphics</td>
+                    <td>Engineering Mathematics II</td>
+                    <td>Holiday</td>
+                    <td>Web Technology</td>
+                    <td>Digital Logic Design</td>
+                    <td>Holiday</td>
+                </tr>
+            </table>
+        </section>
+    </section>
+
+    <script>
+        function toggleTimetable() {
+            var timetable = document.getElementById("timetable");
+            if (timetable.style.display === "none" || timetable.classList.contains("hidden")) {
+                timetable.style.display = "block";
+                timetable.classList.remove("hidden");
+            } else {
+                timetable.style.display = "none";
+                timetable.classList.add("hidden");
+            }
+        }
+    </script>
+</body>
+</html>
